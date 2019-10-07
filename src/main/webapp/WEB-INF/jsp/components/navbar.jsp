@@ -8,7 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="ctg" uri="customtags" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"><img
             src="<c:url value="/resources/images/navbar.jpeg" />"
@@ -116,7 +115,7 @@
                            href="<c:url value="/lang?lang=uk_UA&path=${pageContext.request.servletPath}" />">Слава
                             Україні</a>
                         <a class="dropdown-item"
-                           href="<c:url value="/lang?&path=${pageContext.request.servletPath}" />">Glory
+                           href="<c:url value="/lang?lang=en_US&path=${pageContext.request.servletPath}" />">Glory
                             to Ukraine</a>
                         <a class="dropdown-item" href="<c:url value="/WEB-INF/jsp/errors/lang.jsp" />">Слава Украине</a>
                     </div>
