@@ -9,16 +9,17 @@ import ua.com.expo.util.security.impl.PasswordHashing;
 import ua.com.expo.util.validator.IPasswordValidator;
 import ua.com.expo.util.validator.impl.PasswordValidator;
 
+
 @Configuration
 public class ModelConfiguration {
 
     @Bean
     public ModelMapper modelMapper() {
-       return new ModelMapper();
+        return new ModelMapper();
     }
 
     @Bean
-    public IPasswordHashing passwordHashing(){
+    public IPasswordHashing passwordHashing() {
         return new PasswordHashing();
     }
 
@@ -31,4 +32,5 @@ public class ModelConfiguration {
     public IPasswordValidator passwordValidator() {
         return new PasswordValidator();
     }
+
 }

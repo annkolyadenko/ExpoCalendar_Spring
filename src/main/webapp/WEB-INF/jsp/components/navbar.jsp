@@ -113,10 +113,10 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item"
-                           href="<c:url value="/controller?command=LOCALIZATION&language=Ukrainian&path=${pageContext.request.servletPath}" />">Слава
+                           href="<c:url value="/lang?lang=uk_UA&path=${pageContext.request.servletPath}" />">Слава
                             Україні</a>
                         <a class="dropdown-item"
-                           href="<c:url value="/controller?command=LOCALIZATION&language=English&path=${pageContext.request.servletPath}" />">Glory
+                           href="<c:url value="/lang?&path=${pageContext.request.servletPath}" />">Glory
                             to Ukraine</a>
                         <a class="dropdown-item" href="<c:url value="/WEB-INF/jsp/errors/lang.jsp" />">Слава Украине</a>
                     </div>

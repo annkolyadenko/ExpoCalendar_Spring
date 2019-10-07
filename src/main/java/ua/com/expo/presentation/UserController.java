@@ -2,10 +2,11 @@ package ua.com.expo.presentation;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import ua.com.expo.dto.UserDto;
 import ua.com.expo.service.UserService;
@@ -21,6 +22,8 @@ import java.util.Objects;
 public class UserController {
 
     private final UserService userService;
+    private static final String PREFIX = "/WEB-INF/jsp/";
+    private static final String SUFFIX = ".jsp";
 
     @PostMapping("/signIn")
     public String signIn(HttpServletRequest request, UserDto userDto) {
@@ -40,7 +43,7 @@ public class UserController {
             return "error";
         }
         userDto = userService.signUpUser(userDto);
-        if(Objects.nonNull(userDto)) {
+        if (Objects.nonNull(userDto)) {
             request.getSession().setAttribute("authorizedUser", userDto);
             log.info(request.getSession().getAttribute("authorizedUser") + "authorizedUser");
         }
@@ -52,6 +55,13 @@ public class UserController {
     public String signOut(HttpServletRequest request) {
         request.getSession().invalidate();
         return "redirect:/";
+    }
+
+    @GetMapping("/lang")
+    public String getInternationalPage(HttpServletRequest request) {
+        String path = request.getParameter("path");
+        log.info("Path :" + path);
+        return "redirect:" + path.replace(PREFIX, StringUtils.EMPTY).replace(SUFFIX, StringUtils.EMPTY);
     }
 }
 
