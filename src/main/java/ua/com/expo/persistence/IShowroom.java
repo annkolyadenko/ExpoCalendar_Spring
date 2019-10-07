@@ -1,6 +1,6 @@
 package ua.com.expo.persistence;
 
-import ua.com.expo.persistence.entity.Showroom;
+import ua.com.expo.persistence.domain.Showroom;
 
 import java.util.List;
 import java.util.Optional;

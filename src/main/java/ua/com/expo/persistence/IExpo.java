@@ -1,6 +1,6 @@
 package ua.com.expo.persistence;
 
-import ua.com.expo.persistence.entity.Expo;
+import ua.com.expo.persistence.domain.Expo;
 
 import java.sql.Timestamp;
 import java.util.List;

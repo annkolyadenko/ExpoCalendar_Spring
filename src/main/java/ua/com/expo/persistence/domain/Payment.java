@@ -1,4 +1,4 @@
-package ua.com.expo.persistence.entity;
+package ua.com.expo.persistence.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

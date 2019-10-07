@@ -3,7 +3,7 @@ package ua.com.expo.persistence.springdata;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 import ua.com.expo.persistence.IExpo;
-import ua.com.expo.persistence.entity.Expo;
+import ua.com.expo.persistence.domain.Expo;
 import ua.com.expo.persistence.repository.ExpoRepository;
 
 import java.sql.Timestamp;
@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ExpoImpl implements IExpo {
 
-    private ExpoRepository expoRepository;
+    private final ExpoRepository expoRepository;
 
     @Override
     public List<Expo> findAllExpoByThemeIdAndDate(Long id, Timestamp date) {

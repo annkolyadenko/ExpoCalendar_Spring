@@ -3,7 +3,7 @@ package ua.com.expo.persistence.springdata;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 import ua.com.expo.persistence.ITheme;
-import ua.com.expo.persistence.entity.Theme;
+import ua.com.expo.persistence.domain.Theme;
 import ua.com.expo.persistence.repository.ThemeRepository;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ThemeImpl implements ITheme {
 
-    private ThemeRepository themeRepository;
+    private final ThemeRepository themeRepository;
 
     @Override
     public List<Theme> findAll() {

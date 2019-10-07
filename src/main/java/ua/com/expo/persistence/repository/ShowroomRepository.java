@@ -1,7 +1,7 @@
 package ua.com.expo.persistence.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ua.com.expo.persistence.entity.Showroom;
+import ua.com.expo.persistence.domain.Showroom;
 
 import java.util.Optional;
 

@@ -1,9 +1,10 @@
-package ua.com.expo.persistence.entity;
+package ua.com.expo.persistence.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import ua.com.expo.persistence.entity.enums.RoleType;
+import ua.com.expo.persistence.domain.enums.LangType;
+import ua.com.expo.persistence.domain.enums.RoleType;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -15,14 +16,14 @@ import javax.validation.constraints.Email;
 @NoArgsConstructor
 public class User extends AbstractEntity<Long> {
 
-    @NonNull
     @Enumerated(value = EnumType.STRING)
-    private RoleType type;
+    private RoleType role;
     private String name;
     @NonNull
     @Email
     private String email;
-    private String language;
+    @Enumerated(value = EnumType.STRING)
+    private LangType language;
     @NonNull
     @Lob
     private byte[] password;

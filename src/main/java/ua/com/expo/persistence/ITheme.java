@@ -1,6 +1,6 @@
 package ua.com.expo.persistence;
 
-import ua.com.expo.persistence.entity.Theme;
+import ua.com.expo.persistence.domain.Theme;
 
 import java.util.List;
 
